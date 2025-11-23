@@ -29,6 +29,7 @@ target_link_libraries(
     monopoly_test
     monopoly_project_lib
     gtest_main
+    gmock
 )
 
 include(GoogleTest)
