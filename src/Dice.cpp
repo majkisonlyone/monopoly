@@ -1,7 +1,7 @@
 #include "Dice.hpp"
 #include <random>
 
-int Dice::roll()
+int Dice::roll() const
 {
     std::random_device rd;  
     std::mt19937 gen(rd());         // Mersenne Twister engine

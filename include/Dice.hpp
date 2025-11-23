@@ -1,5 +1,6 @@
 
 class Dice
 {
-    int roll();
+public:
+    int roll() const;
 };
