@@ -1,16 +1,46 @@
 #include "Board.hpp"
+#include <memory>
 
 Board::Board()
 {
-
-    fields = {FieldStart(),   FieldEmpty(),   FieldEmpty(),   FieldReward(),
-              FieldPenalty(), FieldEmpty(),   FieldEmpty(),   FieldEmpty(),
-              FieldPenalty(), FieldPenalty(), FieldReward(),  FieldReward(),
-              FieldEmpty(),   FieldEmpty(),   FieldEmpty(),   FieldEmpty(),
-              FieldEmpty(),   FieldReward(),  FieldPenalty(), FieldEmpty(),
-              FieldEmpty(),   FieldEmpty(),   FieldPenalty(), FieldPenalty(),
-              FieldReward(),  FieldReward(),  FieldEmpty(),   FieldEmpty(),
-              FieldEmpty(),   FieldEmpty(),   FieldEmpty(),   FieldReward(),
-              FieldPenalty(), FieldEmpty(),   FieldEmpty(),   FieldEmpty(),
-              FieldPenalty(), FieldPenalty(), FieldReward(),  FieldReward()};
+    fields.push_back(std::make_unique<FieldStart>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldEmpty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldPenalty>());
+    fields.push_back(std::make_unique<FieldReward>());
+    fields.push_back(std::make_unique<FieldReward>());
 }

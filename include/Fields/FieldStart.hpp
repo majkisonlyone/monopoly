@@ -2,5 +2,6 @@
 
 class FieldStart : public IField
 {
-
+  public:
+    void onStepAction(Player &player) override { player.addMoney(200); }
 };

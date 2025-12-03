@@ -1,3 +1,4 @@
+#include <memory>
 #include <vector>
 
 #include "Fields/FieldEmpty.hpp"
@@ -10,5 +11,5 @@ class Board
   public:
     Board();
 
-    std::vector<IField> fields;
+    std::vector<std::unique_ptr<IField>> fields;
 };

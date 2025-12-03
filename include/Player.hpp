@@ -1,3 +1,4 @@
+#pragma once
 
 class Player
 {
@@ -9,7 +10,7 @@ class Player
     void subtractMoney(int amount);
     bool isBankrupt() const;
     int getPlayerIndex();
-
+    int getFieldIndex();
 
   private:
     int money = 200;

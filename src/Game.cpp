@@ -31,7 +31,10 @@ void Game::takeTurn(Player &player)
     std::cout <<"Total rolled: " << pointsSum <<"\n";
 
     int boardSize = gameboard.fields.size();
+    std::cout << "Money balance before move: " << player.getMoney() << "\n";
     player.move(pointsSum, boardSize);
+    gameboard.fields.at(player.getFieldIndex())->onStepAction(player);
+    std::cout << "Money balance after move: " << player.getMoney() << "\n";
 
     std::cout << "---------------\n";
 }
