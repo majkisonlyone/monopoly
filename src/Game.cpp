@@ -28,7 +28,7 @@ void Game::takeTurn(Player &player)
     {
         pointsSum += die.roll();
     }
-    std::cout <<"Total rolled: " << pointsSum <<"\n";
+    std::cout << "Total rolled: " << pointsSum << "\n";
 
     int boardSize = gameboard.fields.size();
     std::cout << "Money balance before move: " << player.getMoney() << "\n";
@@ -44,17 +44,17 @@ void Game::start(int maxNumberOfRounds)
     for (int round = 0; round < maxNumberOfRounds; round++)
     {
         std::cout << "Current round: " << round << "\n";
-        std::cout <<"=================\n";
+        std::cout << "=================\n";
         for (auto &player : players)
         {
             takeTurn(player);
-            if(isWinnerDetermined())
+            if (isWinnerDetermined())
             {
                 std::cout << "Winner determined!\n";
                 return;
             }
         }
-        std::cout <<"=================\n";
+        std::cout << "=================\n";
     }
 }
 

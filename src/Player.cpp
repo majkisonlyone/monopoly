@@ -5,7 +5,7 @@ Player::Player(int playerIndex) : playerIndex{playerIndex} {}
 
 int Player::getPlayerIndex() { return playerIndex; }
 
-int Player::getFieldIndex() {return fieldIndex; }
+int Player::getFieldIndex() { return fieldIndex; }
 
 void Player::move(int pointsSum, int boardSize)
 {

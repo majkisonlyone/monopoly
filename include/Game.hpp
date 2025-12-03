@@ -8,7 +8,7 @@ class Game
   public:
     Game(int numberOfPlayers);
     void start(int maxNumberOfRounds);
-    void takeTurn(Player& player);
+    void takeTurn(Player &player);
     bool isWinnerDetermined();
 
     std::vector<Player> players;
