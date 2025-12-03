@@ -9,13 +9,13 @@ Features are being iteratively added as developement progresses further.
 ### Iteration 1 - basic features
 1. 2-8 players support
 2. 40 fields board (fields: start, penalty, reward)
-3. Game simulation (until: "loss" or "x rounds have passed")
+3. Game simulation (until: "all players but one go bankrupt" or "x rounds have passed")
 4. Rolling 2 dice
 
 ### Iteration 2
 1. Deposit field (when passing-through leave $, when standing on field collect all $)
 2. Prison (If you step onto it, you have to wait 2 turns!)
-3. Different dice, boards
+3. Different dice (D4, D6, D12...), boards
 4. Polimorphic field
 
 ### Iteration 3

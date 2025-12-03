@@ -9,6 +9,7 @@ class Game
     Game(int numberOfPlayers);
     void start(int maxNumberOfRounds);
     void takeTurn(Player& player);
+    bool isWinnerDetermined();
 
     std::vector<Player> players;
     Board gameboard;
