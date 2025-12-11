@@ -18,13 +18,13 @@ Game::Game(int numberOfPlayers)
     }
 }
 
-void Game::takeTurn(Player &player)
+void Game::takeTurn(Player& player)
 {
     std::cout << "---------------\n";
     std::cout << "Player no.: " << player.getPlayerIndex() << "\n";
     std::cout << "---------------\n";
     int pointsSum = 0;
-    for (const auto &die : dice)
+    for (const auto& die : dice)
     {
         pointsSum += die.roll();
     }
@@ -45,7 +45,7 @@ void Game::start(int maxNumberOfRounds)
     {
         std::cout << "Current round: " << round << "\n";
         std::cout << "=================\n";
-        for (auto &player : players)
+        for (auto& player : players)
         {
             takeTurn(player);
             if (isWinnerDetermined())
@@ -61,7 +61,7 @@ void Game::start(int maxNumberOfRounds)
 bool Game::isWinnerDetermined()
 {
     int numberOfNonBankruptPlayers =
-        std::count_if(players.begin(), players.end(), [](const auto &player)
+        std::count_if(players.begin(), players.end(), [](const auto& player)
                       { return not player.isBankrupt(); });
 
     return numberOfNonBankruptPlayers == 1;

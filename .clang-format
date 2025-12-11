@@ -10,3 +10,4 @@ BraceWrapping:
   AfterUnion: true
   AfterExternBlock: true
 BreakBeforeBraces: Allman
+PointerAlignment: Left

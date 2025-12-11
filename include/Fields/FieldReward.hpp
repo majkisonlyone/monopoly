@@ -3,5 +3,6 @@
 class FieldReward : public IField
 {
   public:
-    void onStepAction(Player &player) { player.addMoney(100); }
+    void onStepAction(Player& player) override { player.addMoney(100); }
+    void onPassAction(Player&) override {}
 };

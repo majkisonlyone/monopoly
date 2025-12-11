@@ -3,5 +3,6 @@
 class FieldEmpty : public IField
 {
   public:
-    void onStepAction(Player &player) override {}
+    void onStepAction(Player& player) override {}
+    void onPassAction(Player&) override {}
 };

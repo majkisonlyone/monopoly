@@ -21,13 +21,13 @@ class GameTest : public testing::Test
     void bankruptAllButOnePlayer()
     {
         std::for_each(sut.players.begin(), sut.players.end() - 1,
-                      [](auto &player) { player.subtractMoney(200); });
+                      [](auto& player) { player.subtractMoney(200); });
     }
 
     void bankruptAllButLastTwoPlayers()
     {
         std::for_each(sut.players.begin(), sut.players.end() - 2,
-                      [](auto &player) { player.subtractMoney(200); });
+                      [](auto& player) { player.subtractMoney(200); });
     }
 
     Game sut{dummyNumOfPlayers};
