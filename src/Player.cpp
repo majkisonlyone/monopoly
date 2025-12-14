@@ -1,18 +1,8 @@
 #include "Player.hpp"
-#include <iostream>
 
 Player::Player(int playerIndex) : playerIndex{playerIndex} {}
 
 int Player::getPlayerIndex() { return playerIndex; }
-
-int Player::getFieldIndex() { return fieldIndex; }
-
-void Player::move(int pointsSum, int boardSize)
-{
-    std::cout << "Previous position: " << fieldIndex << "\n";
-    fieldIndex = (fieldIndex + pointsSum) % boardSize;
-    std::cout << "New position: " << fieldIndex << "\n";
-}
 
 int Player::getMoney() { return money; }
 

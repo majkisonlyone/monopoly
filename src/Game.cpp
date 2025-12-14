@@ -4,13 +4,15 @@
 
 Game::Game(int numberOfPlayers)
 {
+    gameboard = Board();
+
     players.reserve(numberOfPlayers);
+    const int startingFieldIndex = 0;
     for (int playerIndex = 0; playerIndex < numberOfPlayers; playerIndex++)
     {
         players.emplace_back(Player(playerIndex));
+        gameboard.playersOnFields.insert({playerIndex, startingFieldIndex});
     }
-
-    gameboard = Board();
 
     for (int diceIndex = 0; diceIndex < 2; diceIndex++)
     {
@@ -30,10 +32,8 @@ void Game::takeTurn(Player& player)
     }
     std::cout << "Total rolled: " << pointsSum << "\n";
 
-    int boardSize = gameboard.fields.size();
     std::cout << "Money balance before move: " << player.getMoney() << "\n";
-    player.move(pointsSum, boardSize);
-    gameboard.fields.at(player.getFieldIndex())->onStepAction(player);
+    gameboard.movePlayer(player, pointsSum);
     std::cout << "Money balance after move: " << player.getMoney() << "\n";
 
     std::cout << "---------------\n";
